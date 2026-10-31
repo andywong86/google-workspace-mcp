@@ -1,0 +1,18 @@
+[project]
+name = "google-workspace-mcp"
+version = "0.1.0"
+description = "Local MCP server for Google Workspace APIs using gcloud credential profiles."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "google-api-python-client>=2.170.0",
+  "google-auth>=2.40.0",
+  "mcp[cli]>=1.9.0",
+]
+
+[project.scripts]
+google-workspace-mcp = "google_workspace_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
